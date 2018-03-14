@@ -21,4 +21,18 @@
     <servlet-name>dispatcher</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  
+  <filter>
+ <filter-name>setCharacterEncodingFilter</filter-name>
+ <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+ <async-supported>true</async-supported>
+ <init-param>
+     <param-name>encoding</param-name>
+     <param-value>UTF-8</param-value>
+ </init-param>
+ </filter>
+ <filter-mapping>
+    <filter-name>setCharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+ </filter-mapping>
 </web-app>
